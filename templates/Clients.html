@@ -1,0 +1,27 @@
+{% extends 'Header.html' %}
+{% block body %}
+<section id="Clients" class="Main" style="z-index: 106;">
+    <div>
+        <button>
+            <li class="fas fa-2x fa-plus"></li>
+            <a href="{{ url_for('Add_Client')}}" target="_self"> اضافة عميل جديد </a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-minus"></li>
+            <a href="{{ url_for('Remove_Client')}}" target="_self"> حذف عميل </a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-pen"></li>
+            <a href="{{ url_for('Modify_Client')}}" target="_self"> تعديل بيانات عميل </a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-book"></li>
+            <a href="{{ url_for('Show_Clients')}}" target="_self"> عرض جميع العملاء </a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-file"></li>
+            <a href="{{ url_for('Show_Client_Data')}}" target="_self"> عرض بيانات عميل </a>
+        </button>
+    </div>
+</section>
+{% endblock %}

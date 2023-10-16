@@ -1,0 +1,30 @@
+{% extends 'Header.html' %}
+{% block body %}
+<section>
+    <h1>  {{ TheFullComapnyName }} </h1>
+</section>
+<section>
+    <div class="ShowDiv">
+         <table class="table table-bordered table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">التايخ</th>
+                    <th scope="col"> المبلغ</th>
+                    <th scope="col">  شهر</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for Rent in Rents %}
+                        {% for item in Rent %} <tr>
+                            {% for index in item %}
+                                <td> {{index}} </td>
+                            {% endfor %}</tr>
+                        {% endfor %} 
+                {% endfor %}
+            </tbody>
+            <tfoot> 
+            </tfoot>
+         </table>
+    </div>
+</section>
+{% endblock %}

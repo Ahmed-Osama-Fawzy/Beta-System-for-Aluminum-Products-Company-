@@ -1,0 +1,492 @@
+{% extends 'Header.html' %}
+{% block body %}
+<section>
+    <h1>  {{ TheFullComapnyName }} </h1>
+    <form action="{{ url_for('Add_Specifications')}}" , method="POST"> 
+        <h2>  مدخلات عقد اتفاق اعمال تابع لشركة {{TheFullComapnyName}} </h2>
+        <div>
+            <label> رقم العميل التعريفي </label>
+            <input type="number" placeholder="" name="CId">
+        </div>
+        <hr>
+        <div>
+            <label> رقم العمل التعريفي </label>
+            <input type="number" placeholder="" name="WId">
+        </div>
+        <hr>
+        <div>
+            <label>  اسم العميل  </label>
+            <input type="text" placeholder="" name="CName">
+        </div>
+        <hr>
+        <div>
+            <label>  اسم المسئول  </label>
+            <input type="text" placeholder="" name="WName">
+        </div>
+        <hr>
+        <div>
+            <label> رقم هاتف العميل  </label>
+            <input type="number" placeholder="" name="MOClient">
+        </div>
+        <hr>
+        <div>
+            <label> رقم هاتف المسئول  </label>
+            <input type="number" placeholder="" name="MOWorker">
+        </div>
+        <hr>
+        <div>
+            <label> رقم بطاقة العميل  </label>
+            <input type="number" placeholder="" name="CNClient">
+        </div>
+        <hr>
+        <div>
+            <label> رقم  بطاقة المسئول  </label>
+            <input type="number" placeholder="" name="CNWorker">
+        </div>
+        <hr>
+        <div>
+            <label> عنوان العميل  </label>
+            <input type="text" placeholder="" name="ADClient">
+        </div>
+        <hr>
+        <div>
+            <label> عنوان المسئول  </label>
+            <input type="text" placeholder="" name="ADWorker">
+        </div>
+        <hr>
+        <div>
+            <label> نوع العمل </label>
+            <nav>
+                <div>
+                    <input type="radio" id="Kitchen" name="PRType" value="مطابخ">
+                    <label for="Kitchen">مطابخ</label>
+                </div>
+                <div>
+                    <input type="radio" id="Window" name="PRType"  value="شبابيك">
+                    <label for="Window">شبابيك</label>
+                </div>
+                <div>
+                    <input type="radio" id="Door" name="PRType"  value="ابواب">
+                    <label for="Door">ابواب</label>
+                </div>
+                <div>
+                    <input type="radio" id="Shauter" name="PRType"  value=">شيش حصيرة">
+                    <label for="Shauter">شيش حصيرة</label>
+                </div>
+                <div>
+                    <input type="radio" id="Cover"name="PRType"   value=">تند ايطالي">
+                    <label for="Cover">تند ايطالي</label>
+                </div>
+                <div>
+                    <input type="radio" id="Box" name="PRType"  value=">وحات منفصلة">
+                    <label for="Box">وحات منفصلة</label>
+                </div>
+                <div>
+                    <input type="radio" id="Wire" name="PRType"  value=">سلك بيلسية">
+                    <label for="Wire">سلك بيلسية</label>
+                </div>
+                <div>
+                    <input type="radio" id="Another" name="PRType"  value="اخري">
+                    <label for="Another">اخري </label>
+                </div>
+            </nav>
+        </div>
+        <hr>
+        <div>
+            <label> لون العمل </label>
+            <input type="text" placeholder="" name="PRColor">
+        </div>
+        <hr>
+        <div>
+            <label>نوع الومنيوم العمل </label>
+            <select name="PRShape">
+                <optgroup label="الشبابيك">  
+                    <option> بي اس صغير </option>
+                    <option> بي اس كبير </option>
+                    <option> جامبو  </option>
+                    <option> تانجو </option>
+                    <option>  السعد</option>
+                    <option>  العربية </option>
+                    <option> تكنال  </option>
+                    <option>  فالفي</option>
+                    <option>  الوميل  </option>
+                </optgroup>
+                <optgroup label="مطابخ"> 
+                    <option> 4*4  </option>
+                    <option> 2.5*2.5 </option>
+                </optgroup>
+                <optgroup label="شيش"> 
+                    <option> يدوي منفلة  </option>
+                    <option> يدوي شريط </option>
+                    <option>  مكنة كهرباء  </option>
+                    <option>  مكنة ريموت  </option>
+                </optgroup>
+                <optgroup label="ابواب"> 
+                    <option> جرار </option>
+                    <option> مفصلي </option>
+                    <option>  اوكرديون  </option>
+                    <option>  الوميل  </option>
+                </optgroup>
+                <optgroup label="تند"> 
+                    <option> يدوي </option>
+                </optgroup>
+                <optgroup label="سلك بيلسية"> 
+                    <option> افقي مزدوج </option>
+                    <option> افقي فردي </option>
+                    <option> راسي مزدوج </option>
+                    <option> راسي فردي </option>
+                </optgroup>
+            </select>
+        </div>
+        <hr>
+        <div>
+            <label> نوع الرخام </label>
+            <nav>
+                <div>
+                    <input type="radio" id="a" name="GRAType" value="مصري">
+                    <label for="a">مصري</label>
+                </div>
+                <div>
+                    <input type="radio" id="s" name="GRAType"  value="مستورد">
+                    <label for="s">مستورد</label>
+                </div>
+                <div>
+                    <input type="radio" id="q" name="GRAType"  value="لا يوجد">
+                    <label for="q">لا يوجد</label>
+                </div>
+            </nav>
+        </div>
+        <hr>
+        <div>
+            <label> لون الرخام </label>
+            <input type="text" placeholder="" name="GRAColor">
+        </div>
+        <hr>
+        <div>
+            <label> نوع الزجاج </label>
+            <nav>
+                <div>
+                    <input type="radio" id="a" name="GLAType" value="عاكس">
+                    <label for="a">عاكس</label>
+                </div>
+                <div>
+                    <input type="radio" id="s" name="GLAType"  value="عادم">
+                    <label for="s">عادم</label>
+                </div>
+                <div>
+                    <input type="radio" id="d" name="GLAType"  value="شفاف">
+                    <label for="d">شفاف</label>
+                </div>
+                <div>
+                    <input type="radio" id="f" name="GLAType"  value="مراية">
+                    <label for="f">مراية</label>
+                </div>
+                <div>
+                    <input type="radio" id="q" name="GRAType"  value="لا يوجد">
+                    <label for="q">لا يوجد</label>
+                </div>
+            </nav>
+        </div>
+        <hr>
+        <div>
+            <label> حاله الزجاج </label>
+            <nav>
+                <div>
+                    <input type="radio" id="g" name="GLAShape" value="مرسوم">
+                    <label for="g">مرسوم</label>
+                </div>
+                <div>
+                    <input type="radio" id="f" name="GLAShape"  value="ملون الوان">
+                    <label for="f">ملون الوان</label>
+                </div>
+                <div>
+                    <input type="radio" id="d" name="GLAShape"  value="ملون صنفره">
+                    <label for="d">ملون صنفره</label>
+                </div>
+                <div>
+                    <input type="radio" id="s" name="GLAShape"  value="دبل">
+                    <label for="s">دبل </label>
+                </div>
+                <div>
+                    <input type="radio" id="a" name="GLAShape"  value="سينجل">
+                    <label for="a">سينجل </label>
+                </div>
+                <div>
+                    <input type="radio" id="q" name="GRAType"  value="لا يوجد">
+                    <label for="q">لا يوجد</label>
+                </div>
+            </nav>
+        </div>
+        <hr>
+        <div>
+            <label> لون الزجاج </label>
+            <input type="text" placeholder="" name="GLAColor">
+        </div>
+        <hr>
+        <div>
+            <label> نوع الفيبر </label>
+            <nav>
+                <div>
+                    <input type="radio" id="a" name="FIPType" value="مصري">
+                    <label for="a">مصري</label>
+                </div>
+                <div>
+                    <input type="radio" id="s" name="FIPType"  value="مستورد">
+                    <label for="s">مستورد</label>
+                </div>
+                <div>
+                    <input type="radio" id="q" name="GRAType"  value="لا يوجد">
+                    <label for="q">لا يوجد</label>
+                </div>
+            </nav>
+        </div>
+        <hr>
+        <div>
+            <label> لون الفيبر </label>
+            <input type="text" placeholder="" name="FIPColor">
+        </div>
+        <hr>
+        <div>
+            <label> لون  السلك </label>
+            <input type="text" placeholder="" name="WIRColor">
+        </div>
+        <hr>
+        <div>
+            <label> نوع السلك </label>
+            <input type="text" placeholder="" name="WIRType">
+        </div>
+        <hr>
+        <div>
+            <label> نوع الدرفة </label>
+            <nav>
+                <div>
+                    <input type="radio" id="a" name="DOORType" value="كلادنج">
+                    <label for="a">كلادنج</label>
+                </div>
+                <div>
+                    <input type="radio" id="s" name="DOORType"  value="بو في">
+                    <label for="s">بو في</label>
+                </div>
+                <div>
+                    <input type="radio" id="d" name="DOORType" value="خشمنيوم">
+                    <label for="d">خشمنيوم</label>
+                </div>
+                <div>
+                    <input type="radio" id="f" name="DOORType"  value="فيبر">
+                    <label for="f"> فيبر</label>
+                </div>
+                <div>
+                    <input type="radio" id="g" name="DOORType"  value="بولي لاك">
+                    <label for="g"> بولي لاك</label>
+                </div>
+                <div>
+                    <input type="radio" id="q" name="GRAType"  value="لا يوجد">
+                    <label for="q">لا يوجد</label>
+                </div>
+            </nav>
+        </div>
+        <hr>
+        <div>
+            <label> حالة الدرفة </label>
+            <nav>
+                <div>
+                    <input type="radio" id="a" name="DOORShape" value="دبل">
+                    <label for="a">دبل</label>
+                </div>
+                <div>
+                    <input type="radio" id="s" name="DOORShape"  value="سنجل">
+                    <label for="s"> سنجل</label>
+                </div>
+                <div>
+                    <input type="radio" id="q" name="GRAType"  value="لا يوجد">
+                    <label for="q">لا يوجد</label>
+                </div>
+            </nav>
+        </div>
+        <hr>
+        <div>
+            <label> اضافات المطابخ </label>
+            <nav>
+                <div>
+                    <input type="checkbox" id="a" name="ADDT" value="سلة دوارة">
+                    <label for="a"> سلة دوارة</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="s" name="ADDT" value="ترولي زيت ">
+                    <label for="s"> ترولي زيت </label>
+                </div>
+                <div>
+                    <input type="checkbox" id="d" name="ADDT" value="مطبقية استلاستين ثابتة">
+                    <label for="d">  مطبقية استلاستين ثابتة</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="f" name="ADDT" value="مطبقية استلاستين متحركة">
+                    <label for="f"> مطبقية استلاستين متحركة</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="g" name="ADDT" value="رف توابل استلاستين ">
+                    <label for="g"> رف توابل استلاستين </label>
+                </div>
+                <div>
+                    <input type="checkbox" id="h" name="ADDT" value="علاقات حرف S  استلاستين ">
+                    <label for="h"> علاقات حرف S  استلاستين </label>
+                </div>
+                <div>
+                    <input type="checkbox" id="j" name="ADDT" value="دولاب استلاستين ">
+                    <label for="j"> دولاب استلاستين </label>
+                </div>
+                <div>
+                    <input type="checkbox" id="k" name="ADDT" value="سلة مهملات متحركة ">
+                    <label for="k"> سلة مهملات متحركة </label>
+                </div>
+                <div>
+                    <input type="checkbox" id="l" name="ADDT" value="سلة مهملات ثابتة ">
+                    <label for="l"> سلة مهملات ثابتة </label>
+                </div>
+                <div>
+                    <input type="checkbox" id="p" name="ADDT" value="مجاري درج سوفت كلوز ">
+                    <label for="p"> مجاري درج سوفت كلوز </label>
+                </div>
+                <div>
+                    <input type="checkbox" id="o" name="ADDT" value="مفصلات درج سوفت كلوز ">
+                    <label for="o"> مفصلات درج سوفت كلوز </label>
+                </div>
+                <div>
+                    <input type="checkbox" id="i" name="ADDT" value="درفات تاتش ">
+                    <label for="i"> درفات تاتش </label>
+                </div>
+                <div>
+                    <input type="checkbox" id="u" name="ADDT" value=" مقابض مخفية ">
+                    <label for="u"> مقابض مخفية </label>
+                </div>
+                <div>
+                    <input type="checkbox" id="y" name="ADDT" value="شفاط معدن مسطح ">
+                    <label for="y"> شفاط معدن مسطح </label>
+                </div>
+                <div>
+                    <input type="checkbox" id="t" name="ADDT" value="شفاط زجاج كيرفي">
+                    <label for="t"> شفاط زجاج كيرفي</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="r" name="ADDT" value="شفاط معدن كيرفي ">
+                    <label for="r"> شفاط معدن كيرفي </label>
+                </div>
+                <div> 
+                    <input type="checkbox" id="e" name="ADDT" value="شفاط زجاج 15 سم">
+                    <label for="e"> شفاط زجاج 15 سم</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="w" name="ADDT" value="شفاط زجاج 20 سم ">
+                    <label for="w">شفاط زجاج 20 سم </label>
+                </div>
+                <div>
+                    <input type="checkbox" id="q" name="ADDT" value="شفاط مربع 20 سم ">
+                    <label for="q"> شفاط مربع 20 سم </label>
+                </div>
+                <div>
+                    <input type="checkbox" id="z" name="ADDT" value="شفاط مربع 25 سم ">
+                    <label for="z"> شفاط مربع 25 سم </label>
+                </div>
+                <div>
+                    <input type="checkbox" id="x" name="ADDT" value="شفاط مربع 30 سم ">
+                    <label for="x"> شفاط مربع 30 سم   </label>
+                </div>
+                <div>
+                    <input type="checkbox" id="c" name="ADDT" value="شفاط مربع 35 سم ">
+                    <label for="c"> شفاط مربع 35 سم  </label>
+                </div>
+                <div>
+                    <input type="checkbox" id="q" name="GRAType"  value="لا يوجد">
+                    <label for="q">لا يوجد</label>
+                </div>
+            </nav>
+        </div>
+        <div>
+            <label> المساحة الكلية </label>
+            <input type="number" placeholder="" name="FAREA">
+        </div>
+        <hr>
+        <div>
+            <label> سعر المتر الواحد </label>
+            <input type="number" placeholder="" name="OMPrice">
+        </div>
+        <hr>
+        <div>
+            <label> اجمالي سعر المساحة </label>
+            <input type="number" placeholder="" name="FAREAPrice">
+        </div>
+        <hr>
+        <div>
+            <label> اجمالي سعر الملحقات </label>
+            <input type="number" placeholder="" name="ADDTPrice">
+        </div>
+        <hr>
+        <div>
+            <label>  سعر النقل </label>
+            <input type="number" placeholder="" name="TRAPrice">
+        </div>
+        <hr>
+        <div>
+            <label>  اجمالي سعر المقايسة </label>
+            <input type="number" placeholder="" name="FULLPrice">
+        </div>
+        <hr>
+        <div>
+            <label> قيمة الدفعة الاولي  </label>
+            <input type="number" placeholder="" name="FBATAmount">
+        </div>
+        <hr>
+        <div>
+            <label> تاريخ الدفعة الاولي  </label>
+            <input type="date" placeholder="" name="FBATDate">
+        </div>
+        <hr>
+        <div>
+            <label> قيمة الدفعة الثانية  </label>
+            <input type="number" placeholder="" name="SBATAmount">
+        </div>
+        <hr>
+        <div>
+            <label> تاريخ الدفعة الثانية  </label>
+            <input type="date" placeholder="" name="SBATDate">
+        </div>
+        <hr>
+        <div>
+            <label> قيمة الدفعة الثالثة  </label>
+            <input type="number" placeholder="" name="TBATAmount">
+        </div>
+        <hr>
+        <div>
+            <label> تاريخ الدفعة الثالثة  </label>
+            <input type="date" placeholder="" name="TBATDate">
+        </div>
+        <hr>
+        <div>
+            <label> تاريخ التعاقد </label>
+            <input type="date" placeholder="" name="DELDate">
+        </div>
+        <hr>
+        <div>
+            <label> تاريخ التسليم  </label>
+            <input type="date" placeholder="" name="GIVDate">
+        </div>
+        <hr>
+        <div>
+            <label> مكان التسليم </label>
+            <div>
+                <input type="radio" id="a" name="GIVPostion" value="في الشقة">
+                <label for="a">في الشقة</label>
+            </div>
+            <div>
+                <input type="radio" id="s" name="GIVPostion"  value=" في المصنع">
+                <label for="s"> في المصنع</label>
+            </div>
+        </nav>
+        </div>
+        <hr>
+        <div>
+            <input type="submit" id="IO" value="اضافة">
+        </div>
+    </form>
+</section>
+{% endblock %}

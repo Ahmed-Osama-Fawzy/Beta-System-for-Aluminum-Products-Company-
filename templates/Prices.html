@@ -1,0 +1,15 @@
+{% extends 'Header.html' %}
+{% block body %}
+<section id="Prices" class="Main" style="z-index: 105;">
+    <div>
+        <button>
+            <li class="fas fa-2x fa-plus"></li>
+            <a href="{{url_for('Add_Price')}}" target="_self"> اضافة سعر  </a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-file"></li>
+            <a href="{{url_for('Choose_Show_Section')}}" target="_self"> عرض  سعر قسم</a>
+        </button>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'Header.html' %}
+{% block body %}
+<section>
+    <h1>  {{ TheFullComapnyName }} </h1>
+</section>
+<section>
+    <form action="{{ url_for('Bleach_Worker')}}" , method="POST">
+        <div>
+            <label> التاريخ </label>
+            <input type="date" placeholder="" name="Date">
+        </div>
+        <div>
+            <label> رقم العمال التغريفي </label>
+            <input type="number" placeholder="" name="Id">
+        </div>
+        <div>
+            <label> قيمة القبض </label>
+            <input type="number" placeholder="" name="SalaryAm">
+        </div>
+        <hr>
+        <div>
+            <label>  ملاحظة </label>
+            <input type="text" placeholder="" name="Note">
+        </div>
+        <hr>
+        <div>
+            <input type="submit" id="IO" value="اضافة">
+        </div>
+    </form>
+</section>
+{% endblock %}

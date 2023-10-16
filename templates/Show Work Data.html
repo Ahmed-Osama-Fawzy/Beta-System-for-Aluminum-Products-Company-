@@ -1,0 +1,94 @@
+{% extends 'Header.html' %}
+{% block body %}
+<section>
+    <h1>  {{ TheFullComapnyName }} </h1>
+</section>
+<section>
+    <section>
+            <h1> معلومات العمل الخاصة</h1>
+            <div>
+                <h2>اسم  العميل</h2>
+                <p>{{TheData[0][1]}}</p>
+            </div>
+            <hr>
+            <div>
+                <h2>الرقم التعريفي للعمل</h2>
+                <p>{{TheData[0][3]}}</p>
+            </div>
+            <hr>
+            <div>
+                <h2>الرقم التعريفي للعميل</h2>
+                <p>{{TheData[0][2]}}</p>
+            </div>
+            <hr>
+            <div>
+                <h2>نوع العمل </h2>
+                <p>{{TheData[0][7]}}</p>
+            </div>
+            <hr>
+            <div>
+                <h2>العنوان</h2>
+                <p>{{TheData[0][4]}}</p>
+            </div>
+            <hr>
+            <div>
+                <h2>لينك العنوان</h2>
+                <p>{{TheData[0][5]}}</p>
+            </div>
+            <hr>
+            <div>
+                <h2>لينك درايف</h2>
+                <p>{{TheData[0][6]}}</p>
+            </div>
+            <hr>
+            <div>
+                <h2>سعر العمل كامل </h2>
+                <p>{{TheData[0][10]}}</p>
+            </div>
+            <hr>
+            <div>
+                <h2>المدفوع للعمل </h2>
+                <p>{{TheData[0][8]}}</p>
+            </div>
+            <hr>
+            <div>
+                <h2> المنصرف علي العمل</h2>
+                <p>{{TheData[0][9]}}</p>
+            </div>
+            <hr>
+            <div>
+                <h2> الباقي عند العميل </h2>
+                <p>{{TheData[0][11]}}</p>
+            </div>
+            <hr>
+            <div>
+                <h2> مكسب العمل</h2>
+                <p>{{TheData[0][12]}}</p>
+            </div>
+    </section>
+    <div class="ShowDiv">
+         <table class="table table-bordered table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">التاريخ</th>
+                    <th scope="col">المبلغ</th>
+                    <th scope="col">منصرف ل</th>
+                    <th scope="col"> التاجر</th>
+                    <th scope="col"> اداة النقل</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for OWData in WData %}
+                    <tr>
+                    {% for item in OWData %} 
+                        <td> {{item}} </td>
+                    {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+            </tfoot>
+         </table>
+    </div>
+</section>
+{% endblock %}

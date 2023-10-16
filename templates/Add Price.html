@@ -1,0 +1,71 @@
+{% extends 'Header.html' %}
+{% block body %}
+<section>
+    <h1>  {{ TheFullComapnyName }} </h1>
+    </section>
+    <section>
+    <form action="{{ url_for('Select_Section')}}" , method="POST">
+        <div>
+            <label> اختار القسم </label>
+            <nav>
+                <div>
+                    <input type="radio" id="Granuim" name="Section" value="Granuim">
+                    <label for="Granuim"> رخام</label>
+                </div>
+                <div>
+                    <input type="radio" id="GranuimAddtions" name="Section" value="GranuimAddtions">
+                    <label for="GranuimAddtions"> اضافات رخام</label>
+                </div>
+                <div>
+                    <input type="radio" id="Glass" name="Section"  value="Glass">
+                    <label for="Glass"> زجاج </label>
+                </div>
+                <div>
+                    <input type="radio" id="GlassAddtions" name="Section"  value="GlassAddtions">
+                    <label for="GlassAddtions">اضافات زجاج </label>
+                </div>
+                <div>
+                    <input type="radio" id="Fibr" name="Section"  value="Fibr">
+                    <label for="Fibr">فيبر</label>
+                </div>
+                <div>
+                    <input type="radio" id="Kitchens" name="Section"  value="Kitchens">
+                    <label for="Kitchens"> مطابخ </label>
+                </div>
+                <div>
+                    <input type="radio" id="Windows" name="Section"  value="Windows">
+                    <label for="Windows"> شبابيك </label>
+                </div>
+                <div>
+                    <input type="radio" id="Shutters" name="Section"  value="Shutters">
+                    <label for="Shutters"> شيش </label>
+                </div>
+                <div>
+                    <input type="radio" id="ShutersMachines" name="Section" value="ShutersMachines">
+                    <label for="ShutersMachines"> مكن الشيش</label>
+                </div>
+                <div>
+                    <input type="radio" id="Doors" name="Section"  value="Doors">
+                    <label for="Doors"> ابواب </label>
+                </div>
+                <div>
+                    <input type="radio" id="Covers" name="Section"  value="Covers">
+                    <label for="Covers"> تند </label>
+                </div>
+                <div>
+                    <input type="radio" id="Wires" name="Section"  value="Wires">
+                    <label for="Wires"> سلك </label>
+                </div>
+                <div>
+                    <input type="radio" id="Addtions" name="Section"  value="Addtions">
+                    <label for="Addtions"> ملحقات الاعمال  </label>
+                </div>
+            </nav>
+        </div>
+        <hr>
+        <div>
+            <input type="submit" id="IO" value="اضافة">
+        </div>
+    </form>
+</section>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'Header.html' %}
+{% block body %}
+
+<section id="Workers" class="Main" style="z-index: 102;">
+    <div>
+        <h2> اجمالي المكسب </h2>
+        <p> {{TheProfits}} </p>
+    </div>
+    <hr>
+    <div>
+        <h2> اجمالي المرتبات </h2>
+        <p> {{TheTSalary}} </p>
+    </div>
+    <hr>
+    <div>
+        <h2> اجمالي مصاريف المصنع </h2>
+        <p> {{TheTFactory}} </p>
+    </div>
+    <hr>
+    <div>
+        <h2> اجمالي مصاريف المنزل </h2>
+        <p> {{TheTHome}} </p>
+    </div>
+    <hr>
+    <div>
+        <h2> الباقي </h2>
+        <p> {{TheRest}} </p>
+    </div>
+</section>
+{% endblock %}

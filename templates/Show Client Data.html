@@ -1,0 +1,70 @@
+{% extends 'Header.html' %}
+{% block body %}
+<section>
+    <h1> {{ TheFullComapnyName }} </h1>
+</section>
+<section>
+    <h1> معلومات العميل الخاصة</h1>
+    <div>
+        <h2>الاسم</h2>
+        <p>{{TheData[0][1]}}</p>
+    </div>
+    <hr>
+    <div>
+        <h2>الرقم التعريفي</h2>
+        <p>{{TheData[0][2]}}</p>
+    </div>
+    <hr>
+    <div>
+        <h2>رقم الهاتف</h2>
+        <p>{{TheData[0][4]}}</p>
+    </div>
+    <hr>
+    <div>
+        <h2>العنوان</h2>
+        <p>{{TheData[0][3]}}</p>
+    </div>
+    <hr>
+    <div>
+        <h2>لينك العنوان</h2>
+        <p>{{TheData[0][5]}}</p>
+    </div>
+    <hr>
+    <div>
+        <h2>عدد الاعمال</h2>
+        <p>{{TheData[0][6]}}</p>
+    </div>
+    <div class="ShowDiv">
+        <table class="table table-bordered table-dark">
+           <thead>
+               <tr>
+                   <th scope="col">التايخ</th>
+                   <th scope="col">اسم العميل</th>
+                   <th scope="col">رقم العميل التعريفي</th>
+                   <th scope="col">رقم العمل التعريفي</th>
+                   <th scope="col">العنوان</th>
+                   <th scope="col">لينك العنوان</th>
+                   <th scope="col">لينك درايف</th>
+                   <th scope="col">نوع العمل</th>
+                   <th scope="col">المال المدفوع</th>
+                   <th scope="col">المال المصروف</th>
+                   <th scope="col">اجمالي حساب العمل</th>
+                   <th scope="col">باقي حساب العمل</th>
+                   <th scope="col">مكسب العمل</th>
+               </tr>
+           </thead>
+           <tbody>
+               {% for OWData in WData %}
+                       {% for item in OWData %} <tr>
+                           {% for index in item %}
+                               <td> {{index}} </td>
+                           {% endfor %}</tr>
+                       {% endfor %} 
+               {% endfor %}
+           </tbody>
+           <tfoot> 
+           </tfoot>
+        </table>
+   </div>
+</section>
+{% endblock %}

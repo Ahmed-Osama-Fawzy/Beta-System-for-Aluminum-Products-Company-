@@ -1,0 +1,40 @@
+{% extends 'Header.html' %}
+{% block body %}
+<section>
+    <h1>  {{ TheFullComapnyName }}</h1>
+</section>
+<section>
+    <div class="ShowDiv">
+         <table class="table table-bordered table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">التايخ</th>
+                    <th scope="col">اسم العميل</th>
+                    <th scope="col">رقم العميل التعريفي</th>
+                    <th scope="col">رقم العمل التعريفي</th>
+                    <th scope="col">العنوان</th>
+                    <th scope="col">لينك العنوان</th>
+                    <th scope="col">لينك درايف</th>
+                    <th scope="col">نوع العمل</th>
+                    <th scope="col">المال المدفوع</th>
+                    <th scope="col">المال المصروف</th>
+                    <th scope="col">اجمالي حساب العمل</th>
+                    <th scope="col">باقي حساب العمل</th>
+                    <th scope="col">مكسب العمل</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for Work in Works %}
+                        {% for item in Work %} <tr>
+                            {% for index in item %}
+                                <td> {{index}} </td>
+                            {% endfor %}</tr>
+                        {% endfor %} 
+                {% endfor %}
+            </tbody>
+            <tfoot> 
+            </tfoot>
+         </table>
+    </div>
+</section>
+{% endblock %}

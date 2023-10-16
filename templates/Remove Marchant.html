@@ -1,0 +1,18 @@
+{% extends 'Header.html' %}
+{% block body %}
+<section>
+    <h1>  {{ TheFullComapnyName }} </h1>
+</section>
+<section>
+    <form action="{{ url_for('Remove_Marchant')}}" method="POST">
+        <div>
+            <label> رقم التاجر التعريفي </label>
+            <input  type="number" name="ID">
+        </div>
+        <hr>
+        <div>
+            <input type="submit" id="IO" value="حذف">
+        </div>
+    </form>
+</section>
+{% endblock %}

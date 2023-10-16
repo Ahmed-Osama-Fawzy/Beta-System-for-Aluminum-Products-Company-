@@ -1,0 +1,32 @@
+{% extends 'Header.html' %}
+{% block body %}
+
+<section id="Factory" class="Main" style="z-index: 101;">
+    <div>
+        <button>
+            <li class="fas fa-2x fa-plus"></li>
+            <a href="{{ url_for('Add_Rents')}}" target="_self"> اضافة ايجار </a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-book"></li>
+            <a href="{{ url_for('Show_Rents')}}" target="_self"> عرض الايجارات </a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-plus"></li>
+            <a href="{{ url_for('Add_GovernPayments')}}" target="_self"> اضافة مصروفات حكومية </a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-book"></li>
+            <a href="{{ url_for('Show_GovernPayments')}}" target="_self"> عرض المصروفات الحكومية</a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-plus"></li>
+            <a href="{{ url_for('Add_FPayments')}}" target="_self"> اضافة مصروفات  </a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-book"></li>
+            <a href="{{ url_for('Show_FPayments')}}" target="_self"> عرض المصروفات </a>
+        </button>
+    </div>
+</section>
+{% endblock %}

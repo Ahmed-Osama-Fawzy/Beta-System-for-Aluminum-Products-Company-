@@ -1,0 +1,40 @@
+{% extends 'Header.html' %}
+{% block body %}
+
+<section id="Workers" class="Main" style="z-index: 102;">
+    <div>
+        <button>
+            <li class="fas fa-2x fa-plus"></li>
+            <a href="{{ url_for('Add_Worker')}}" target="_self"> اضافة عامل جديد </a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-minus"></li>
+            <a href="{{ url_for('Remove_Worker')}}" target="_self"> حذف عامل </a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-pen"></li>
+            <a href="{{ url_for('Modify_Worker')}}" target="_self"> تعديل بيانات عامل </a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-plus"></li>
+            <a href="{{ url_for('Enroll_Worker')}}" target="_self">  تسجيل حضور عامل </a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-plus"></li>
+            <a href="{{ url_for('Bleach_Worker')}}" target="_self"> تقبيض عامل</a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-minus"></li>
+            <a href="{{ url_for('Worker_Discount')}}" target="_self"> خصم عامل</a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-book"></li>
+            <a href="{{ url_for('Show_Workers')}}" target="_self"> عرض جميع العمال </a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-file"></li>
+            <a href="{{ url_for('Show_Worker_Data')}}" target="_self"> عرض بيانات عامل </a>
+        </button>
+    </div>
+</section>
+{% endblock %}

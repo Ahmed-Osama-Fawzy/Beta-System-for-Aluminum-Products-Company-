@@ -1,0 +1,47 @@
+{% extends 'Header.html' %}
+{% block body %}
+<section id="Works" class="Main" style="z-index: 105;">
+    <div>
+        <button>
+            <li class="fas fa-2x fa-plus"></li>
+            <a href="{{ url_for('Add_Work')}}" target="_self"> اضافة عمل جديد </a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-plus"></li>
+            <a href="{{ url_for('Add_Specifications')}}" target="_self"> اضافة مقايسة العمل </a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-pen"></li>
+            <a href="{{ url_for('Modify_Specifications')}}" target="_self"> تعديل مقايسة العمل </a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-file"></li>
+            <a href="{{ url_for('Show_Specifications')}}" target="_self"> عرض المقايسة العمل </a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-plus"></li>
+            <a href="{{ url_for('Add_Money')}}" target="_self">اضافة مال لعمل</a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-plus"></li>
+            <a href="{{ url_for('Add_Payments')}}" target="_self"> اضافة مشتريات</a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-minus"></li>
+            <a href="{{ url_for('Remove_Work')}}" target="_self"> حذف عمل </a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-pen"></li>
+            <a href="{{ url_for('Modify_Work')}}" target="_self">تعديل بيانات عمل </a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-book"></li>
+            <a href="{{ url_for('Show_Works')}}" target="_self"> عرض الاعمال </a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-file"></li>
+            <a href="{{ url_for('Show_Work_Data')}}" target="_self"> عرض بيانات عمل  </a>
+        </button>
+    </div>
+</section>
+{% endblock %}

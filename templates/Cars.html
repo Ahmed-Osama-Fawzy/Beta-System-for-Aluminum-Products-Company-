@@ -1,0 +1,31 @@
+{% extends 'Header.html' %}
+{% block body %}
+<section id="Cars" class="Main" style="z-index: 103;">
+    <div>
+        <button>
+            <li class="fas fa-2x fa-plus"></li>
+            <a href="{{ url_for('Add_Car')}}" target="_self"> اضافة سيارة</a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-minus"></li>
+            <a href="{{ url_for('Remove_Car')}}" target="_self"> حذف سيارة </a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-pen"></li>
+            <a href="{{ url_for('Modify_Car')}}" target="_self"> تعديل معلومات سيارة</a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-book"></li>
+            <a href="{{ url_for('Show_Cars')}}" target="_self"> عرض جميع السيارات </a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-plus"></li>
+            <a href="{{ url_for('Add_Payments_For_Car')}}" target="_self"> اضافة مصروفات </a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-file"></li>
+            <a href="{{ url_for('Show_Car_Data')}}" target="_self"> عرض معلومات سيارة</a>
+        </button>
+    </div>
+</section>
+{% endblock %}

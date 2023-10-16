@@ -1,0 +1,77 @@
+{% extends 'Header.html' %}
+{% block body %}
+<section>
+    <h1>  {{ TheFullComapnyName }} </h1>
+</section>
+<section>
+    <form  action="{{ url_for('Modify_Work')}}" , method="POST">
+        <div>
+            <label> رقم العمل التعريفي </label>
+            <input type="number" placeholder="" name="WID">
+        </div>
+        <hr>
+        <div>
+            <label> تعديل رقم العميل التعريفي </label>
+            <input type="number" name="CID">
+        </div>
+        <hr>
+        <div>
+            <label> تعديل النوع </label>
+            <nav>
+                <div>
+                    <input type="radio" id="Kitchen" name="Type" value="مطابخ">
+                    <label for="Kitchen">مطابخ</label>
+                </div>
+                <div>
+                    <input type="radio" id="Window" name="Type"  value="شبابيك">
+                    <label for="Window">شبابيك</label>
+                </div>
+                <div>
+                    <input type="radio" id="Door" name="Type"  value="ابواب">
+                    <label for="Door">ابواب</label>
+                </div>
+                <div>
+                    <input type="radio" id="Shauter" name="Type"  value="شيش حصيرة">
+                    <label for="Shauter">شيش حصيرة</label>
+                </div>
+                <div>
+                    <input type="radio" id="Cover"name="Type"   value="تند ايطالي">
+                    <label for="Cover">تند ايطالي</label>
+                </div>
+                <div>
+                    <input type="radio" id="Box" name="Type"  value="وحدات منفصلة">
+                    <label for="Box">وحدات منفصلة</label>
+                </div>
+                <div>
+                    <input type="radio" id="Wire" name="Type"  value=">سلك بيلسية">
+                    <label for="Wire">سلك بيلسية</label>
+                </div>
+            </nav>
+        </div>
+        <hr>
+        <div>
+            <label> تعديل العنوان </label>
+            <input type="text" placeholder="" name="Address">
+        </div>
+        <hr>
+        <div>
+            <label> تعديل لينك العنوان </label>
+            <input type="url" placeholder="" name="Location">
+        </div>
+        <hr>
+        <div>
+            <label> تعديل لينك درايف </label>
+            <input type="text" placeholder="" name="Drive">
+        </div>
+        <hr>
+        <div>
+            <label> تعدبل اجمالي حساب العمل</label>
+            <input type="number" placeholder="" name="TMoney">
+        </div>
+        <hr>
+        <div>
+            <input type="submit" id="IO" value="تعديل">
+        </div>
+    </form>
+</section>
+{% endblock %}

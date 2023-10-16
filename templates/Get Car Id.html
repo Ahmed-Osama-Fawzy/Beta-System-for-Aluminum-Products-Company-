@@ -1,0 +1,17 @@
+{% extends 'Header.html' %}
+{% block body %}
+<section>
+    <h1>  {{ TheFullComapnyName }} </h1>
+</section>
+<section>
+    <form  action="{{url_for('Show_Car_Data')}}" , method="POST">
+        <div>
+            <label> رقم السيارة التعريفي </label>
+            <input type="number" name="Id">
+        </div>
+        <div>
+            <input type="submit" id="IO" value="عرض">
+        </div>
+    </form>
+</section>
+{% endblock %}

@@ -1,0 +1,395 @@
+{% extends 'Header.html' %}
+{% block body %}
+<section>
+    <h1>  {{ TheFullComapnyName }} </h1>
+</section>
+<section>
+    {% if Type == "Granuim" %}
+        <div class="ShowDiv">
+            <h1> {{ Type }} </h1>
+            <table class="table table-bordered table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">التاريخ</th>
+                        <th scope="col">الرقم التعريفي</th>
+                        <th scope="col">السعر </th>
+                        <th scope="col">اللون</th>
+                        <th scope="col"> ملاحظات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for Row in TheData %}
+                        <tr>
+                            {% for item in Row %}
+                                <td> {{item}} </td>
+                            {% endfor %}
+                            <td>
+                                <button  class="Del" data-value="Delete" data-type="{{ Type }}" data-number="{{ loop.index -1 }}" > مسح </button>
+                                <button class="Upd" data-value="Update" data-type="{{ Type }}" data-number="{{ loop.index -1 }}"> تحديث </button>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+                <tfoot>
+                </tfoot>
+            </table>
+        </div>
+    {% endif %}
+    {% if Type == "Glass" %}
+        <div class="ShowDiv">
+            <h1> {{ Type }} </h1>
+            <table class="table table-bordered table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">التاريخ</th>
+                        <th scope="col">الرقم التعريفي</th>
+                        <th scope="col">السعر </th>
+                        <th scope="col">السعر الاساسي</th>
+                        <th scope="col">اللون</th>
+                        <th scope="col"> ملاحظات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for Row in TheData %}
+                        <tr>
+                            {% for item in Row %}
+                                <td> {{item}} </td>
+                            {% endfor %}
+                            <td>
+                                <button class="Del" data-value="Delete" data-type="{{ Type }}" data-number="{{ loop.index -1 }}"> مسح </button>
+                                <button class="Upd" data-value="Update" data-type="{{ Type }}" data-number="{{ loop.index -1 }}"> تحديث </button>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+                <tfoot>
+                </tfoot>
+            </table>
+        </div>
+    {% endif %}
+    {% if Type == "GarniumAddtions" %}
+        <div class="ShowDiv">
+            <h1> {{ Type }} </h1>
+            <table class="table table-bordered table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">التاريخ</th>
+                        <th scope="col">الرقم التعريفي</th>
+                        <th scope="col">السعر </th>
+                        <th scope="col">الاضافة</th>
+                        <th scope="col"> ملاحظات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for Row in TheData %}
+                        <tr>
+                            {% for item in Row %}
+                                <td> {{item}} </td>
+                            {% endfor %}
+                            <td>
+                                <button class="Del" data-value="Delete" data-type="{{ Type }}" data-number="{{ loop.index -1 }}"> مسح </button>
+                                <button class="Upd" data-value="Update" data-type="{{ Type }}" data-number="{{ loop.index -1 }}"> تحديث </button>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+                <tfoot>
+                </tfoot>
+            </table>
+        </div>
+    {% endif %}
+    {% if Type == "GlassAddtions" %}
+        <div class="ShowDiv">
+            <h1> {{ Type }} </h1>
+            <table class="table table-bordered table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">التاريخ</th>
+                        <th scope="col">الرقم التعريفي</th>
+                        <th scope="col">السعر </th>
+                        <th scope="col">الاضافة</th>
+                        <th scope="col"> ملاحظات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for Row in TheData %}
+                        <tr>
+                            {% for item in Row %}
+                                <td> {{item}} </td>
+                            {% endfor %}
+                            <td>
+                                <button class="Del" data-value="Delete" data-type="{{ Type }}" data-number="{{ loop.index -1 }}"> مسح </button>
+                                <button class="Upd" data-value="Update" data-type="{{ Type }}" data-number="{{ loop.index -1 }}"> تحديث </button>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+                <tfoot>
+                </tfoot>
+            </table>
+        </div>
+    {% endif %}
+    {% if Type == "Fibr" %}
+        <div class="ShowDiv">
+            <h1> {{ Type }} </h1>
+            <table class="table table-bordered table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">التاريخ</th>
+                        <th scope="col">الرقم التعريفي</th>
+                        <th scope="col">السعر </th>
+                        <th scope="col">التوع</th>
+                        <th scope="col"> ملاحظات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for Row in TheData %}
+                        <tr>
+                            {% for item in Row %}
+                                <td> {{item}} </td>
+                            {% endfor %}
+                            <td>
+                                <button class="Del" data-value="Delete" data-type="{{ Type }}" data-number="{{ loop.index -1 }}"> مسح </button>
+                                <button class="Upd" data-value="Update" data-type="{{ Type }}" data-number="{{ loop.index -1 }}"> تحديث </button>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+                <tfoot>
+                </tfoot>
+            </table>
+        </div>
+    {% endif %}
+    {% if Type == "ShutersMachines" %}
+        <div class="ShowDiv">
+            <h1> {{ Type }} </h1>
+            <table class="table table-bordered table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">التاريخ</th>
+                        <th scope="col">الرقم التعريفي</th>
+                        <th scope="col">السعر </th>
+                        <th scope="col">النوع </th>
+                        <th scope="col">الشكل</th>
+                        <th scope="col"> ملاحظات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for Row in TheData %}
+                        <tr>
+                            {% for item in Row %}
+                                <td> {{item}} </td>
+                            {% endfor %}
+                            <td>
+                                <button class="Del" data-value="Delete" data-type="{{ Type }}" data-number="{{ loop.index -1 }}"> مسح </button>
+                                <button class="Upd" data-value="Update" data-type="{{ Type }}" data-number="{{ loop.index -1 }}"> تحديث </button>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+                <tfoot>
+                </tfoot>
+            </table>
+        </div>
+    {% endif %}
+    {% if Type == "Addtions" %}
+        <div class="ShowDiv">
+            <h1> {{ Type }} </h1>
+            <table class="table table-bordered table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">التاريخ</th>
+                        <th scope="col">الرقم التعريفي</th>
+                        <th scope="col">السعر </th>
+                        <th scope="col">النوع </th>
+                        <th scope="col">الاسم</th>
+                        <th scope="col">القسم</th>
+                        <th scope="col"> ملاحظات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for Row in TheData %}
+                        <tr>
+                            {% for item in Row %}
+                                <td> {{item}} </td>
+                            {% endfor %}
+                            <td>
+                                <button class="Del" data-value="Delete" data-type="{{ Type }}" data-number="{{ loop.index -1 }}"> مسح </button>
+                                <button class="Upd" data-value="Update" data-type="{{ Type }}" data-number="{{ loop.index -1 }}"> تحديث </button>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+                <tfoot>
+                </tfoot>
+            </table>
+        </div>
+    {% endif %}
+    {% if Type == "Windows" %}
+        <div class="ShowDiv">
+            <h1> {{ Type }} </h1>
+            <table class="table table-bordered table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">التاريخ</th>
+                        <th scope="col">الرقم التعريفي</th>
+                        <th scope="col">السعر </th>
+                        <th scope="col"> النوع</th>
+                        <th scope="col">الشكل</th>
+                        <th scope="col">المواصفات </th>
+                        <th scope="col"> ملاحظات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for Row in TheData %}
+                        <tr>
+                            {% for item in Row %}
+                                <td> {{item}} </td>
+                            {% endfor %}
+                            <td>
+                                <button class="Del" data-value="Delete" data-type="{{ Type }}" data-number="{{ loop.index -1 }}"> مسح </button>
+                                <button class="Upd" data-value="Update" data-type="{{ Type }}" data-number="{{ loop.index -1 }}"> تحديث </button>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+                <tfoot>
+                </tfoot>
+            </table>
+        </div>
+    {% endif %}
+    {% if Type == "Doors" %}
+        <div class="ShowDiv">
+            <h1> {{ Type }} </h1>
+            <table class="table table-bordered table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">التاريخ</th>
+                        <th scope="col">الرقم التعريفي</th>
+                        <th scope="col">السعر </th>
+                        <th scope="col"> النوع</th>
+                        <th scope="col">الشكل</th>
+                        <th scope="col">المواصفات</th>
+                        <th scope="col"> ملاحظات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for Row in TheData %}
+                        <tr>
+                            {% for item in Row %}
+                                <td> {{item}} </td>
+                            {% endfor %}
+                            <td>
+                                <button class="Del" data-value="Delete" data-type="{{ Type }}" data-number="{{ loop.index -1 }}"> مسح </button>
+                                <button class="Upd" data-value="Update" data-type="{{ Type }}" data-number="{{ loop.index -1 }}"> تحديث </button>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+                <tfoot>
+                </tfoot>
+            </table>
+        </div>
+    {% endif %}
+    {% if Type == "Kitchens" %}
+        <div class="ShowDiv">
+            <h1> {{ Type }} </h1>
+            <table class="table table-bordered table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">التاريخ</th>
+                        <th scope="col">الرقم التعريفي</th>
+                        <th scope="col">السعر </th>
+                        <th scope="col">النوع </th>
+                        <th scope="col">الشكل</th>
+                        <th scope="col">المواصفات</th>
+                        <th scope="col"> ملاحظات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for Row in TheData %}
+                        <tr>
+                            {% for item in Row %}
+                                <td> {{item}} </td>
+                            {% endfor %}
+                            <td>
+                                <button class="Del" data-value="Delete" data-type="{{ Type }}" data-number="{{ loop.index -1 }}"> مسح </button>
+                                <button class="Upd" data-value="Update" data-type="{{ Type }}" data-number="{{ loop.index -1 }}"> تحديث </button>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+                <tfoot>
+                </tfoot>
+            </table>
+        </div>
+    {% endif %}
+    {% if Type == "Wires" %}
+        <div class="ShowDiv">
+            <h1> {{ Type }} </h1>
+            <table class="table table-bordered table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">التاريخ</th>
+                        <th scope="col">الرقم التعريفي</th>
+                        <th scope="col">السعر </th>
+                        <th scope="col"> النوع</th>
+                        <th scope="col">اللون</th>
+                        <th scope="col">الشكل</th>
+                        <th scope="col">المواصفات</th>
+                        <th scope="col"> ملاحظات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for Row in TheData %}
+                        <tr>
+                            {% for item in Row %}
+                                <td> {{item}} </td>
+                            {% endfor %}
+                            <td>
+                                <button class="Del" data-value="Delete" data-type="{{ Type }}" data-number="{{ loop.index -1 }}"> مسح </button>
+                                <button class="Upd" data-value="Update" data-type="{{ Type }}" data-number="{{ loop.index -1 }}"> تحديث </button>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+                <tfoot>
+                </tfoot>
+            </table>
+        </div>
+    {% endif %}
+    {% if Type == "Shuters" %}
+        <div class="ShowDiv">
+            <h1> {{ Type }} </h1>
+            <table class="table table-bordered table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">التاريخ</th>
+                        <th scope="col">الرقم التعريفي</th>
+                        <th scope="col">السعر </th>
+                        <th scope="col"> النوع</th>
+                        <th scope="col">اللون</th>
+                        <th scope="col">المواصفات</th>
+                        <th scope="col"> ملاحظات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for Row in TheData %}
+                        <tr>
+                            {% for item in Row %}
+                                <td> {{item}} </td>
+                            {% endfor %}
+                            <td>
+                                <button class="Del" data-value="Delete" data-type="{{ Type }}" data-number="{{ loop.index -1 }}"> مسح </button>
+                                <button class="Upd" data-value="Update" data-type="{{ Type }}" data-number="{{ loop.index -1 }}"> تحديث </button>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+                <tfoot>
+                </tfoot>
+            </table>
+        </div>
+    {% endif %}
+</section>
+{% endblock %}

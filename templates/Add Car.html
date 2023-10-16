@@ -1,0 +1,48 @@
+{% extends 'Header.html' %}
+{% block body %}
+<section>
+    <h1>  {{ TheFullComapnyName }} </h1>
+</section>
+ <section>
+    <form action="{{ url_for('Add_Car')}}" , method="POST">
+        <div>
+            <label> التاريخ </label>
+            <input type="date"  name="Date">
+        </div>
+        <hr>
+        <div>
+            <label> الرقم التعريفي </label>
+            <span>C{{Id}}</span>
+        </div>
+        <hr>
+        <div>
+            <label> احرف اللوحة </label>
+            <input type="text" placeholder="" name="Chars">
+        </div>
+        <hr>
+        <div>
+            <label> رقم اللوحة </label>
+            <input type="number" placeholder="" name="Number">
+        </div>
+        <hr>
+        <div>
+            <label> اللون </label>
+            <input type="text" placeholder="" name="Color">
+        </div>
+        <hr>
+        <div>
+            <label> النوع </label>
+            <input type="text" placeholder="" name="Type">
+        </div>
+        <hr>
+        <div>
+            <label> الشكل </label>
+            <input type="text" placeholder="" name="Shape">
+        </div>
+        <hr>
+        <div>
+            <input type="submit" id="IO" value="اضافة">
+        </div>
+    </form>
+</section>
+{% endblock %}

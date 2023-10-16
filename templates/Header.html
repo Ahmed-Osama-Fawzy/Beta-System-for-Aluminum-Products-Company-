@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{{ url_for('static' , filename='Main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static' , filename='all.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static' , filename='all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static' , filename='bootstrap.min.css.map') }}">
+    <link rel="stylesheet" href="{{ url_for('static' , filename='bootstrap.min.css') }}">
+    <link rel="icon" href="{{ url_for('static' , filename='Logo.jpeg') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+    {% block nav %}
+        <nav class="navbar navbar-expand-lg "style="background-color: #87E1C7;">
+            <a class="navbar-brand" href="#">{{TheFullComapnyName}}</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <img src="static/Images/White_Logo.JPEG">
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{url_for('Main')}}">الرئيسية</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('Work')}}">الاعمال</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('Client')}}">العملاء</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('Marchant')}}">التجار</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('Worker')}}">العمال</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('Car')}}">السيارات</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('Factory')}}">المصنع</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('Home')}}">المنزل</a>
+                </li>
+            </ul>
+            </div>
+        </nav>
+    {% endblock %}
+    {% block body%}
+    {% endblock %}
+    {% block button %}
+        <i class="fas fa-3x fa-arrow-up" id="ReturnToTop"></i>
+    {% endblock %}
+    <script src="{{ url_for('static' , filename='Main.js') }}"></script>
+    <script src="{{ url_for('static' , filename='all.min.js') }}"></script>
+    <script src="{{ url_for('static' , filename='all.js') }}"></script>
+    <script src="{{ url_for('static' , filename='bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static' , filename='bootstrap.bundle.min.js.map') }}"></script>
+</body>
+</html>

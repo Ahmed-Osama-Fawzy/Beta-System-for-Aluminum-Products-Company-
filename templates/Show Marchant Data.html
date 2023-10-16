@@ -1,0 +1,68 @@
+{% extends 'Header.html' %}
+{% block body %}
+<section>
+    <h1>  {{ TheFullComapnyName }} </h1>
+</section>
+<section>
+    <section>
+            <h1> معلومات العمل الخاصة</h1>
+            <div>
+                <h2>اسم التاجر</h2>
+                <p>{{TheData[0][1]}}</p>
+            </div>
+            <hr>
+            <div>
+                <h2>الرقم التعريفي للتاجر</h2>
+                <p>{{TheData[0][2]}}</p>
+            </div>
+            <hr>
+            <div>
+                <h2>نوع التجارة </h2>
+                <p>{{TheData[0][6]}}</p>
+            </div>
+            <hr>
+            <div>
+                <h2>العنوان</h2>
+                <p>{{TheData[0][5]}}</p>
+            </div>
+            <hr>
+            <div>
+                <h2>لينك العنوان</h2>
+                <p>{{TheData[0][3]}}</p>
+            </div>
+            <hr>
+            <div>
+                <h2>رقم التليفون </h2>
+                <p>{{TheData[0][4]}}</p>
+            </div>
+            <hr>
+            <div>
+                <h2> قيمة التعامل</h2>
+                <p>{{TheData[0][7]}}</p>
+            </div>
+    </section>
+    <div class="ShowDiv">
+         <table class="table table-bordered table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">التاريخ</th>
+                    <th scope="col">المنصرف</th>
+                    <th scope="col"> المنتج</th>
+                    <th scope="col">العميل</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for OWData in WData %}
+                    <tr>
+                    {% for item in OWData %} 
+                        <td> {{item}} </td>
+                    {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+            </tfoot>
+         </table>
+    </div>
+</section>
+{% endblock %}

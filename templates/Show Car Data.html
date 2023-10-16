@@ -1,0 +1,77 @@
+{% extends 'Header.html' %}
+{% block body %}
+<section>
+    <h1> {{ TheFullComapnyName}} </h1>
+</section>
+<section>
+    <section>
+            <h1> معلومات السيارة الخاصة</h1>
+            <div>
+                <h2>رقم لوحة السيارة </h2>
+                <p>{{TheData[0][2]}}</p>
+            </div>
+            <hr>
+            <div>
+                <h2>احرف لوحة السيارة  </h2>
+                <p>{{TheData[0][3]}}</p>
+            </div>
+            <hr>
+            <div>
+                <h2> لون السيارة </h2>
+                <p>{{TheData[0][4]}}</p>
+            </div>
+            <hr>
+            <div>
+                <h2>نوع السيارة</h2>
+                <p>{{TheData[0][5]}}</p>
+            </div>
+            <hr>
+            <div>
+                <h2>شكل السيارة</h2>
+                <p>{{TheData[0][6]}}</p>
+            </div>
+            <hr>
+            <div>
+                <h2> ارادات السيارة</h2>
+                <p>{{TheData[0][7]}}</p>
+            </div>
+            <hr>
+            <div>
+                <h2> مصروفات السيارة </h2>
+                <p>{{TheData[0][8]}}</p>
+            </div>
+            <hr>
+            <div>
+                <h2> باقي ايراد السيارة</h2>
+                <p>{{TheData[0][9]}}</p>
+            </div>
+    </section>
+    <div class="ShowDiv">
+         <table class="table table-bordered table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">التاريخ</th>
+                    <th scope="col">المنصرف</th>
+                    <th scope="col">البنزين</th>
+                    <th scope="col">الزيت</th>
+                    <th scope="col">منصرف ل</th>
+                    <th scope="col">الوراد</th>
+                    <th scope="col">وارد من</th>
+                    <th scope="col">العميل</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for OWData in WData %}
+                    <tr>
+                        {% for item in OWData %} 
+                            <td> {{item}} </td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+            </tfoot>
+         </table>
+    </div>
+</section>
+{% endblock %}

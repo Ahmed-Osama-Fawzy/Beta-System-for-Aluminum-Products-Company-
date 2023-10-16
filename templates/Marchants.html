@@ -1,0 +1,27 @@
+{% extends 'Header.html' %}
+{% block body %}
+<section id="Marchants" class="Main" style="z-index: 104;">
+    <div>
+        <button>
+            <li class="fas fa-2x fa-plus"></li>
+            <a href="{{ url_for('Add_Marchant')}}" target="_self"> اضافة تاجر جديد </a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-minus"></li>
+            <a href="{{ url_for('Remove_Marchant')}}" target="_self"> حذف تاجر </a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-pen"></li>
+            <a href="{{ url_for('Modify_Marchant')}}" target="_self"> تعديل بيانات تاجر </a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-book"></li>
+            <a href="{{ url_for('Show_Marchants')}}" target="_self"> عرض جميع التجار </a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-file"></li>
+            <a href="{{ url_for('Show_Marchant_Data')}}" target="_self"> عرض جميع تعاملات تاجر </a>
+        </button>
+    </div>
+</section>
+{% endblock %}

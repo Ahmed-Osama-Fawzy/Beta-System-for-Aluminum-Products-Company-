@@ -1,0 +1,64 @@
+{% extends 'Header.html' %}
+{% block body %}
+<section>
+    <h1>  {{ TheFullComapnyName }} </h1>
+    </section>
+    <section>
+    <form action="{{ url_for('Modify_Marchant')}}" , method="POST">
+        <div>
+            <label> الرقم التعريفي </label>
+            <input type="number" placeholder="" name="ID">
+        </div>
+        <hr>
+        <div>
+            <label> الاسم </label>
+            <input type="text" placeholder="" name="Name">
+        </div>
+        <hr>
+        <div>
+            <label> رقم التليفون </label>
+            <input type="number" placeholder="" name="Mobile">
+        </div>
+        <hr>
+        <div>
+            <label> العنوان </label>
+            <input type="text" placeholder="" name="Address">
+        </div>
+        <hr>
+        <div>
+            <label> لينك العنوان </label>
+            <input type="url" placeholder="" name="Location">
+        </div>
+        <hr>
+        <div>
+            <label> نوع التجارة </label>
+            <nav>
+                <div>
+                    <input type="radio" id="Alum" name="Type" value="الومنيوم">
+                    <label for="Alum">الومنيوم</label>
+                </div>
+                <div>
+                    <input type="radio" id="Glas" name="Type"  value="زجاج">
+                    <label for="Glas">زجاج</label>
+                </div>
+                <div>
+                    <input type="radio" id="Colo" name="Type"  value="الوان">
+                    <label for="Colo">الوان</label>
+                </div>
+                <div>
+                    <input type="radio" id="Fibr" name="Type"  value="فيبر">
+                    <label for="Fibr"> فيبر</label>
+                </div>
+                <div>
+                    <input type="radio" id="Acss"name="Type"   value="اكسسوارات">
+                    <label for="Acss"> اكسسوارات</label>
+                </div>
+            </nav>
+        </div>
+        <hr>
+        <div>
+            <input type="submit" id="IO" value="اضافة">
+        </div>
+    </form>
+</section>
+{% endblock %}

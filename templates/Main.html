@@ -1,0 +1,50 @@
+{% extends 'Header.html' %}
+{% block nav %}
+<p></p>
+{% endblock %}
+{% block body %}
+<section id="Group" class="Main" style="z-index: 107;">
+    <div>
+        <h1> {{TheFullComapnyName }}</h1>
+        <img src="../static/Images/White_Logo.JPEG" style="border-radius:30%;height:90%;width:90%;box-shadow: 15px 15px 15px rgb(185, 185, 185);margin:5%;">
+    </div>
+    <div>
+        <button class="Choose"> 
+            <i class="fas fa-2x fa-users"></i> 
+            <a href="{{url_for('Client')}}" target="_self"> العملاء </a>
+        </button>
+        <button class="Choose">
+            <i class="fas fa-2x fa-hammer"></i> 
+            <a href="{{url_for('Work')}}" target="_self"> الاعمال </a>
+        </button>
+        <button class="Choose">
+            <i class="fas fa-2x fa-shopping-bag"></i> 
+            <a href="{{url_for('Marchant')}}" target="_self"> التجار </a>
+        </button>
+        <button class="Choose">
+            <i class="fas fa-2x fa-truck"></i> 
+            <a href="{{url_for('Car')}}" target="_self"> السيارات </a>
+        </button>
+        <button class="Choose">
+            <i class="fas fa-2x fa-users"></i> 
+            <a href="{{url_for('Worker')}}" target="_self"> العمال </a>
+        </button>
+        <button class="Choose">
+            <i class="fas fa-2x fa-industry"></i> 
+            <a href="{{url_for('Factory')}}" target="_self"> المصنع </a>
+        </button>
+        <button class="Choose">
+            <i class="fas  fa-2x fa-door-open"></i>
+            <a href="{{url_for('Home')}}" target="_self"> المنزل </a>
+        </button>
+        <button class="Choose">
+            <i class="fas  fa-2x fa-coins"></i>
+            <a href="{{url_for('Prices')}}" target="_self"> الاسعار </a>
+        </button>
+        <button class="Choose">
+            <i class="fas  fa-2x fa-coins"></i>
+            <a href="{{url_for('Report')}}" target="_self"> رصيدك </a>
+        </button>
+    </div>
+</section>
+{% endblock %}

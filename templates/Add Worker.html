@@ -1,0 +1,105 @@
+{% extends 'Header.html' %}
+{% block body %}
+<section>
+    <h1>  {{ TheFullComapnyName }} </h1>
+    </section>
+    <section>
+    <form action="{{ url_for('Add_Worker')}}" , method="POST">
+        <div>
+            <label> التاريخ </label>
+            <input type="date"  name="Date">
+        </div>
+        <hr>
+        <div>
+            <label> الرقم التعريفي </label>
+            <span>C{{Id}}</span>
+        </div>
+        <hr>
+        <div>
+            <label> الاسم </label>
+            <input type="text" placeholder="" name="Name">
+        </div>
+        <hr>
+        <div>
+            <label> رقم التليفون </label>
+            <input type="number" placeholder="" name="Mobile">
+        </div>
+        <hr>
+        <div>
+            <label> العنوان </label>
+            <input type="text" placeholder="" name="Address">
+        </div>
+        <hr>
+        <div>
+            <label> لينك العنوان </label>
+            <input type="url" placeholder="" name="Location">
+        </div>
+        <hr>
+        <div>
+            <label> رقم البطاقة </label>
+            <input type="number" placeholder="" name="CardNum">
+        </div>
+        <hr>
+        <div>
+            <label> قيمة اليومية </label>
+            <input type="number" placeholder="" name="DailySalary">
+        </div>
+        <hr>
+        <div>
+            <label> نوع العمل </label>
+            <nav>
+                <div>
+                    <input type="radio" id="FullEx" name="WType" value="عامل كامل الخبرة">
+                    <label for="FullEx">عامل كامل الخبرة</label>
+                </div>
+                <div>
+                    <input type="radio" id="AverEx" name="WType"  value="عامل متوسط الخبرة">
+                    <label for="AverEx">عامل متوسط الخبرة</label>
+                </div>
+                <div>
+                    <input type="radio" id="Hellper" name="WType"  value="مساعد">
+                    <label for="Hellper">مساعد</label>
+                </div>
+                <div>
+                    <input type="radio" id="Fixing" name="WType"  value="عامل تركيبات">
+                    <label for="Fixing"> عامل تركيبات</label>
+                </div>
+                <div>
+                    <input type="radio" id="Driver"name="WType"   value="سائق">
+                    <label for="Driver"> سائق</label>
+                </div>
+                <div>
+                    <input type="radio" id="Manger" name="WType"  value="مدير">
+                    <label for="Manger">مدير </label>
+                </div>
+            </nav>
+        </div>
+        <hr>
+        <div>
+            <label> نوع القبض </label>
+            <nav>
+                <div>
+                    <input type="radio" id="Daily" name="SType" value="يومي">
+                    <label for="Daily"> يومي</label>
+                </div>
+                <div>
+                    <input type="radio" id="weekly" name="SType"  value="اسبوعي">
+                    <label for="weekly"> اسبوعي </label>
+                </div>
+                <div>
+                    <input type="radio" id="Monthly" name="SType"  value="شهري">
+                    <label for="Monthly">شهري</label>
+                </div>
+                <div>
+                    <input type="radio" id="NotFixed" name="SType"  value="غير ثابت ">
+                    <label for="NotFixed"> غير ثابت </label>
+                </div>
+            </nav>
+        </div>
+        <hr>
+        <div>
+            <input type="submit" id="IO" value="اضافة">
+        </div>
+    </form>
+</section>
+{% endblock %}

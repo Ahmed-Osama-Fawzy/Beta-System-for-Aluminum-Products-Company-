@@ -1,0 +1,40 @@
+{% extends 'Header.html' %}
+{% block body %}
+
+<section id="Home" class="Main" style="z-index: 100;">
+    <div>
+        <button>
+            <li class="fas fa-2x fa-plus"></li>
+            <a href="{{ url_for('Add_HRents')}}" target="_self"> اضافة ايجار </a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-book"></li>
+            <a href="{{ url_for('Show_HRents')}}" target="_self"> عرض الايجارات </a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-plus"></li>
+            <a href="{{ url_for('Add_HGovernPayments')}}" target="_self"> اضافة مصروفات حكومية </a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-book"></li>
+            <a href="{{ url_for('Show_HGovernPayments')}}" target="_self"> عرض المصروفات الحكومية</a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-plus"></li>
+            <a href="{{ url_for('Add_HSchoolPayments')}}" target="_self"> اضافة مصروفات دراسية </a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-book"></li>
+            <a href="{{ url_for('Show_HSchoolPayments')}}" target="_self"> عرض المصروفات الدراسية</a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-plus"></li>
+            <a href="{{ url_for('Add_HFPayments')}}" target="_self"> اضافة مصروفات  </a>
+        </button>
+        <button>
+            <li class="fas fa-2x fa-book"></li>
+            <a href="{{ url_for('Show_HFPayments')}}" target="_self"> عرض المصروفات </a>
+        </button>
+    </div>
+</section>
+{% endblock %}
